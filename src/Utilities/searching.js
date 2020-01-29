@@ -68,8 +68,7 @@ const Searching = {
     starTrek.insert(4, 'Lt. Cmdr. LaForge');
     starTrek.insert(9, 'Lt. Cmdr. Crusher');
     starTrek.insert(8, 'Lieutenant Selar');
-
-
+    
     return starTrek;
   }
 
