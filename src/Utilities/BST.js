@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const Queue = require('./queue');
 
 class BST {

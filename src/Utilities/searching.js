@@ -1,5 +1,5 @@
 /* eslint-disable eqeqeq */
-const BST = require('./BST');
+// const BST = require('./BST');
 //////// SEARCHES ////////
 
 
@@ -13,8 +13,9 @@ const Searching = {
     }
     return -1;
   },
-  
-  binarySearch(array, value, start, end) {
+
+  binarySearch(array, value, start, end, count=0) {
+    count++;
     start = start === undefined ? 0 : start;
     end = end === undefined ? array.length : end;
   
@@ -26,13 +27,13 @@ const Searching = {
     const item = array[index];
   
     if (item == value) {
-      return index;
+      return count;
     }
     else if (item < value) {
-      return this.binarySearch(array, value, index + 1, end);
+      return this.binarySearch(array, value, index + 1, end, count);
     }
     else if (item > value) {
-      return this.binarySearch(array, value, start, index - 1);
+      return this.binarySearch(array, value, start, index - 1,count);
     }
   }
 

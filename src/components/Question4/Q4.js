@@ -10,7 +10,7 @@ class Q4 extends React.Component {
   render() {
     return(
       <div>
-        Placeholder for the next Question.
+        <h3>Question 4: Searching in a BST</h3>
       </div>
     )
   }

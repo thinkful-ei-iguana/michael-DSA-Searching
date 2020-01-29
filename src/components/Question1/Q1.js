@@ -11,6 +11,7 @@ class Q1 extends React.Component {
 
   binary8 = (ev) =>{
     ev.preventDefault();
+    console.log(this.props.array)
     let foundIn = Searching.binarySearch(this.props.array, 8);
     this.setOutput(foundIn);
   }

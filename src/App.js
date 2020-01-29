@@ -1,6 +1,7 @@
 import React from 'react';
 import Q1 from './components/Question1/Q1';
 import Q2 from './components/Question2/Q2';
+import Q3 from './components/Question3/Q3';
 import Header from './components/Header/Header';
 import {Switch, Route} from 'react-router-dom';
 import './App.css';
@@ -18,8 +19,11 @@ class App extends React.Component {
       <div className="App">
         <Header></Header>
         <Switch>
-          <Route path="/q1" component={Q1} array={this.state.sortedList1}/>
+          <Route path="/q1" component={() => <Q1 array={this.state.sortedList1} />}
+          />
           <Route path="/q2" component={Q2} />
+          <Route path="/q3" component={Q3} />
+
         </Switch>
 
       </div>
