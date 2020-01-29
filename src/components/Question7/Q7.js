@@ -10,7 +10,7 @@ class Q7 extends React.Component {
   render() {
     return(
       <div>
-        Placeholder for the next Question.
+        <h3>Question 7: Max profit</h3>
       </div>
     )
   }

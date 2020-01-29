@@ -13,19 +13,19 @@ class BST {
   insert(key, value) {
     if (this.key == null) {
       this.key = key;
-      this.value = key;
+      this.value = value;
     } else if (key < this.key) {
       if (this.left == null) {
-        this.left = new BST(key, key, this);
+        this.left = new BST(key, value, this);
       }
       else {
         this.left.insert(key, value);
       }
     } else {
       if(this.right == null) {
-        this.right = new BST(key, key, this);
+        this.right = new BST(key, value, this);
       } else {
-        this.right.insert(key, key);
+        this.right.insert(key, value);
       }
     }
   }
@@ -128,9 +128,9 @@ class BST {
   // SEARCHES //
   bfs(tree, values=[]) {
     const queue = new Queue();
-    const node = tree.root;
+    const node = tree;
     queue.enqueue(node);
-    while (queue.length) {
+    while (queue.last) {
       const node = queue.dequeue();
       values.push(node.value);
 

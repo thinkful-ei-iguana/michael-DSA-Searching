@@ -39,23 +39,38 @@ const Searching = {
 
   createBST(){
     let newBST = new BST();
-    newBST.insert(25);
-    newBST.insert(15);
-    newBST.insert(50);
-    newBST.insert(10);
-    newBST.insert(24);
-    newBST.insert(35);
-    newBST.insert(70);
-    newBST.insert(4);
-    newBST.insert(12);
-    newBST.insert(18);
-    newBST.insert(31);
-    newBST.insert(44);
-    newBST.insert(66);
-    newBST.insert(90);
-    newBST.insert(22);
+    newBST.insert(25, 25);
+    newBST.insert(15, 15);
+    newBST.insert(50, 50);
+    newBST.insert(10, 10);
+    newBST.insert(24, 24);
+    newBST.insert(35, 35);
+    newBST.insert(70, 70);
+    newBST.insert(4, 4);
+    newBST.insert(12, 12);
+    newBST.insert(18, 12);
+    newBST.insert(31, 31);
+    newBST.insert(44, 44);
+    newBST.insert(66, 66);
+    newBST.insert(90, 90);
+    newBST.insert(22, 22);
     console.log(newBST);
     return newBST;
+  },
+
+  createRankTree() {
+    let starTrek = new BST();
+    starTrek.insert(5, 'Captain Picard');
+    starTrek.insert(6, 'Commander Data');
+    starTrek.insert(3, 'Commander Riker');
+    starTrek.insert(2, 'Lt. Cmdr. Worf');
+    starTrek.insert(1, 'Lieutenant Security Officer');
+    starTrek.insert(4, 'Lt. Cmdr. LaForge');
+    starTrek.insert(9, 'Lt. Cmdr. Crusher');
+    starTrek.insert(8, 'Lieutenant Selar');
+
+
+    return starTrek;
   }
 
 }
