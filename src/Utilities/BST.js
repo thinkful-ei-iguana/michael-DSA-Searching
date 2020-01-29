@@ -9,18 +9,47 @@ class BST {
     this.left = null;
     this.right = null;
   }
-
-  dfs(values=[]) {
-    if (this.left) {
-      values = this.left.dfs(values);
-    }
-    values.push(this.value);
-    if (this.right) {
-      values = this.right.dfs(values);
-    }
-    return values;
-  }
   
+  insert(key, value) {
+    if (this.key == null) {
+      this.key = key;
+      this.value = key;
+    } else if (key < this.key) {
+      if (this.left == null) {
+        this.left = new BST(key, key, this);
+      }
+      else {
+        this.left.insert(key, value);
+      }
+    } else {
+      if(this.right == null) {
+        this.right = new BST(key, key, this);
+      } else {
+        this.right.insert(key, key);
+      }
+    }
+  }
+
+  badinsert(key, value) {
+    if (this.key == null) {
+      this.key = key;
+      this.value = value;
+    } else if (key > this.key) {
+      if (this.left == null) {
+        this.left = new BST(key, value, this);
+      }
+      else {
+        this.left.badinsert(key, value);
+      }
+    } else {
+      if(this.right == null) {
+        this.right = new BST(key, value, this);
+      } else {
+        this.right.badinsert(key, value);
+      }
+    }
+  }
+
   find(key) {
     if (this.key == key) {
       return this;
@@ -113,6 +142,39 @@ class BST {
       }
     }
 
+    return values;
+  }
+  
+  inOrderDFS(values=[]) {
+    if (this.left) {
+      values = this.left.inOrderDFS(values);
+    }
+    values.push(this.value);
+    if (this.right) {
+      values = this.right.inOrderDFS(values);
+    }
+    return values;
+  }
+
+  preOrderDFS(values=[]){
+    values.push(this.value);
+    if (this.left) {
+      values = this.left.preOrderDFS(values);
+    }
+    if (this.right) {
+      values = this.right.preOrderDFS(values);
+    }
+    return values;
+  }
+
+  postOrderDFS(values=[]) {
+    if (this.left) {
+      values = this.left.postOrderDFS(values);
+    }
+    if (this.right) {
+      values = this.right.postOrderDFS(values);
+    }
+    values.push(this.value);
     return values;
   }
 

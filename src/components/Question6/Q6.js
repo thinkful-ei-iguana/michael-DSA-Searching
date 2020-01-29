@@ -10,7 +10,7 @@ class Q6 extends React.Component {
   render() {
     return(
       <div>
-        Placeholder for the next Question.
+        <h3>Question 6: Find the next commanding officer</h3>
       </div>
     )
   }

@@ -31,12 +31,15 @@ class Q2 extends React.Component {
   handleBinarySearch = (ev) => {
     ev.preventDefault();
     let sortedArray = this.state.dataset.sort(this.compareFunction);
-    console.log(sortedArray);
+
     let howMany = Searching.binarySearch(sortedArray, this.state.value,0,sortedArray.length);
+
     if (howMany === -1){
       return this.setState({results: `${this.state.value} does not appear in the dataset.`})
     } else {
-      return this.setState({results: `${this.state.value} appeared after ${howMany} tries.`})
+      return this.setState({
+        results: `${this.state.value} appeared after ${howMany} tries.`
+      })
     }
   }
 
