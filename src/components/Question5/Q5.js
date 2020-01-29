@@ -10,7 +10,7 @@ class Q5 extends React.Component {
   render() {
     return(
       <div>
-        Placeholder for the next Question.
+        <h3>Question 5: Implementing different tree traversals</h3>
       </div>
     )
   }
