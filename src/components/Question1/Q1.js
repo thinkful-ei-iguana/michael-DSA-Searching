@@ -1,5 +1,5 @@
 import React from 'react';
-import Searching from '../../utils/searching';
+import Searching from '../../Utilities/searching';
 
 class Q1 extends React.Component {
   constructor(props) {
