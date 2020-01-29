@@ -10,6 +10,31 @@
   color: white;
 }
 
+.header {
+  position: fixed;
+  top: 0px;
+  min-width: 100vw;
+  min-height: 3vh;
+  background: rgba(255,255,255,0.2);
+  border-bottom: 5px groove white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.header a{
+  text-decoration: none;
+  color: white;
+  font-size:0.75em;
+}
+
+.link{
+  margin: 3px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.2);
+}
+
 
 
 @media (prefers-reduced-motion: no-preference) {

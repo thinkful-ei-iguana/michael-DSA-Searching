@@ -22,7 +22,6 @@ class App extends React.Component {
           <Route path="/q2" component={Q2} />
         </Switch>
 
-        <Q1 array={this.state.sortedList1} />
       </div>
     );
   }
