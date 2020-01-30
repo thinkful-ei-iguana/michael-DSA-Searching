@@ -14,9 +14,6 @@ class Q5 extends React.Component {
   preOrderArray = this.myBST.preOrderDFS();
   postOrderArray = this.myBST.postOrderDFS();
   render() {
-    console.log('In order: ', this.inOrderArray);   console.log('Pre order: ', this.preOrderArray);   console.log('Post order: ', this.postOrderArray);
-
-
     return(
       <div>
         <h3>Question 5: Implementing different tree traversals</h3>

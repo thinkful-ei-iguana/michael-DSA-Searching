@@ -54,7 +54,6 @@ const Searching = {
     newBST.insert(66, 66);
     newBST.insert(90, 90);
     newBST.insert(22, 22);
-    console.log(newBST);
     return newBST;
   },
 
@@ -68,7 +67,7 @@ const Searching = {
     starTrek.insert(4, 'Lt. Cmdr. LaForge');
     starTrek.insert(9, 'Lt. Cmdr. Crusher');
     starTrek.insert(8, 'Lieutenant Selar');
-    
+
     return starTrek;
   }
 

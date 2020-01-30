@@ -1,4 +1,5 @@
 import React from 'react';
+import Landing from './components/Landing/Landing'
 import Q1 from './components/Question1/Q1';
 import Q2 from './components/Question2/Q2';
 import Q3 from './components/Question3/Q3';
@@ -23,7 +24,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header></Header>
+
         <Switch>
+          <Route exact path="/" component={Landing} />
           <Route path="/q1" component={() => <Q1 array={this.state.sortedList1} />}
           />
           <Route path="/q2" component={Q2} />
