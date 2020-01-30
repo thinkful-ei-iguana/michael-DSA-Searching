@@ -1,14 +1,14 @@
 /* eslint-disable eqeqeq */
 import Queue from './queue'
 
-const BST = {
+class BST {
   constructor(key = null, value = null, parent = null) {
     this.key = key;
     this.value = value;
     this.parent = parent;
     this.left = null;
     this.right = null;
-  },
+  }
   
   insert(key, value) {
     if (this.key == null) {
@@ -28,7 +28,7 @@ const BST = {
         this.right.insert(key, value);
       }
     }
-  },
+  }
 
   badinsert(key, value) {
     if (this.key == null) {
@@ -48,7 +48,7 @@ const BST = {
         this.right.badinsert(key, value);
       }
     }
-  },
+  }
 
   find(key) {
     if (this.key == key) {
@@ -60,7 +60,7 @@ const BST = {
     } else {
       throw new Error('Key Error');
     }
-  },
+  }
 
   remove(key) {
     if (this.key == key) {
@@ -83,7 +83,7 @@ const BST = {
     } else {
       throw new Error('Key Error');
     }
-  },
+  }
 
   _replaceWith(node) {
     if (this.parent) {
@@ -109,21 +109,21 @@ const BST = {
         this.right = null;
       }
     }
-  },
+  }
 
   _findMin() {
     if (!this.left) {
       return this;
     }
     return this.left._findMin();
-  },
+  }
 
   _findMax() {
     if (!this.right) {
       return this;
     }
     return this.right._findMax();
-  },
+  }
 
   // SEARCHES //
   bfs(tree, values=[]) {
@@ -143,7 +143,7 @@ const BST = {
     }
 
     return values;
-  },
+  }
   
   inOrderDFS(values=[]) {
     if (this.left) {
@@ -154,7 +154,7 @@ const BST = {
       values = this.right.inOrderDFS(values);
     }
     return values;
-  },
+  }
 
   preOrderDFS(values=[]){
     values.push(this.value);
@@ -165,7 +165,7 @@ const BST = {
       values = this.right.preOrderDFS(values);
     }
     return values;
-  },
+  }
 
   postOrderDFS(values=[]) {
     if (this.left) {
