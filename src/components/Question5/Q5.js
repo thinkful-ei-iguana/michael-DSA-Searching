@@ -25,15 +25,15 @@ class Q5 extends React.Component {
         </div> 
         <br /><br />
         <div>
-          In Order: {this.inOrderArray}
+          In Order: {`[ ${this.inOrderArray.join(', ')} ]`}
         </div>
         <br /><br />
         <div>
-          Pre-Order: {this.preOrderArray}
+          Pre-Order: {`[ ${this.preOrderArray.join(', ')} ]`}
         </div>
         <br /><br />
         <div>
-          Post-Order: {this.postOrderArray}
+          Post-Order: {`[ ${this.postOrderArray.join(', ')} ]`}
         </div>
       </div>
     )

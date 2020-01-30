@@ -4,7 +4,9 @@ class Q3 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      author: '',
+      title: '',
+      dewey: ''
     }
   }
   library = [
@@ -46,11 +48,23 @@ class Q3 extends React.Component {
     }
   }
 
+  handleClick = (ev) => {
+    ev.preventDefault();
+    let book = this.librarySearch(this.library, '005.133', 'The C++ Programming Language');
+    this.setBook(book);
+  };
+
+  setBook = (book) => {
+    this.setState({
+      author: book.author,
+      title: book.title,
+      dewey: book.dewey
+    })
+  }
  
 
   render() {
 
-    console.log(this.librarySearch(this.library, '005.133', 'The C++ Programming Language'));
 
     return(
       <div>
@@ -61,12 +75,16 @@ class Q3 extends React.Component {
         <br /><br />
         <div>
           Looking for a book using Dewey Decimal System: <br /><br />
-          
+          In order to find a book you would first find the category, then sub cat. etc. until you landed on the dewey decimal of the book. (binary search)
           <br /><br />
-          
+          Once you got the dewey, you would find the book by its title.  If there are multiple books under the same dewey, you would need to do another binary search for the title.
           <br /><br />
-          
+          Given some example data, click this button to return the book data for a book that we know the title ('The C++ Programming Language') and dewey ('005.133') of:
         </div> 
+        <button onClick={this.handleClick}>Click me!</button>
+          <div>Title: {`"${this.state.title}"`}</div>
+          <div>Author: {this.state.author}</div>
+          <div>Dewey: {this.state.dewey}</div>
       </div>
     )
   }

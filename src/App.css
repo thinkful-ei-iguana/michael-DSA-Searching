@@ -3,6 +3,8 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
+  padding-right: 5vw;
+  padding-left: 5vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -40,6 +42,22 @@
   max-width: 50vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+button {
+  font-size: 36px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10%;
+  padding: 12px;
+  margin: 3px;
+}
+
+input {
+  font-size: 36px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 10%;
+  padding: 12px;
+  margin: 3px;
 }
 
 

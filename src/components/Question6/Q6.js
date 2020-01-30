@@ -13,7 +13,7 @@ class Q6 extends React.Component {
   
   handleNext = (ev) => {
     ev.preventDefault();
-    if (this.state.i < this.commandArray.length) {
+    if (this.state.i < this.commandArray.length - 1) {
       this.setState({
         i: this.state.i + 1
       })
@@ -23,8 +23,7 @@ class Q6 extends React.Component {
     });
   }
   render() {
-    console.log(this.starTrekBST);
-    console.log(this.commandArray);
+
     return(
       <div>
         <h3>Question 6: Find the next commanding officer</h3>
