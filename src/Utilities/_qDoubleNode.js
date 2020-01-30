@@ -1,4 +1,4 @@
-const _qDoubleNode = {
+class _qDoubleNode {
   constructor(value, next, prev) {
     this.value = value;
     this.next = next;

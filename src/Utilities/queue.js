@@ -1,10 +1,11 @@
 import _Node from './_queueNode';
 import _dNode from './_qDoubleNode';
-const Queue = {
+
+class Queue  {
   constructor() {
     this.first = null;
     this.last = null;
-  },
+  }
 
   //for doubly-linked lists
   enqueueD(data){
@@ -21,7 +22,7 @@ const Queue = {
     }
     this.last = node;
     this.last.next = null;
-  },
+  }
 
   dequeueD() {
     if (this.first === null) {
@@ -37,7 +38,7 @@ const Queue = {
     }
 
     return node.value;
-  },
+  }
 
   enqueue(data) {
     const node = new _Node(data);
@@ -50,7 +51,7 @@ const Queue = {
     }
 
     this.last = node;
-  },
+  }
 
   dequeue() {
     if (this.first === null) {
