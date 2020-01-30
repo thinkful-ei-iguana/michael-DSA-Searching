@@ -1,7 +1,8 @@
-class _queueNode {
+const _queueNode = {
   constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
-module.exports = _queueNode;
+
+export default _queueNode;

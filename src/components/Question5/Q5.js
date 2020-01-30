@@ -1,5 +1,4 @@
 import React from 'react';
-import BST from '../../Utilities/BST';
 import Searching from '../../Utilities/searching';
 
 class Q5 extends React.Component {

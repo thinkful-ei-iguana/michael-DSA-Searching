@@ -1,5 +1,5 @@
 /* eslint-disable eqeqeq */
-const BST = require('./BST');
+import BST from './BST';
 //////// SEARCHES ////////
 
 

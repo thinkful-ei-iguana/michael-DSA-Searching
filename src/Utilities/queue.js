@@ -1,10 +1,10 @@
-const _Node = require('./_queueNode');
-const _dNode = require('./_qDoubleNode');
-class Queue {
+import _Node from './_queueNode';
+import _dNode from './_qDoubleNode';
+const Queue = {
   constructor() {
     this.first = null;
     this.last = null;
-  }
+  },
 
   //for doubly-linked lists
   enqueueD(data){
@@ -21,7 +21,8 @@ class Queue {
     }
     this.last = node;
     this.last.next = null;
-  }
+  },
+
   dequeueD() {
     if (this.first === null) {
       return;
@@ -36,7 +37,7 @@ class Queue {
     }
 
     return node.value;
-  }
+  },
 
   enqueue(data) {
     const node = new _Node(data);
@@ -49,7 +50,7 @@ class Queue {
     }
 
     this.last = node;
-  }
+  },
 
   dequeue() {
     if (this.first === null) {
@@ -67,4 +68,4 @@ class Queue {
   }
 }
 
-module.exports = Queue;
+export default Queue;
